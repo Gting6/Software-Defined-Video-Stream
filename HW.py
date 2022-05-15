@@ -123,12 +123,12 @@ def post_estimation(image):
     mp_pose = mp.solutions.pose
 
     with mp_pose.Pose(
-        static_image_mode=True,
-        model_complexity=2,
-        enable_segmentation=True,
+        static_image_mode=False,
+        model_complexity=1,
+        enable_segmentation=False,
         min_detection_confidence=0.5) as pose:
 
-        image_height, image_width, _ = image.shape
+        # image_height, image_width, _ = image.shape
         # Convert the BGR image to RGB before processing.
         results = pose.process(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         if results.pose_landmarks:
