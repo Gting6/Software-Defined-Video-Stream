@@ -7,7 +7,7 @@ Server use gstreamer as data producer, nginx as streaming server.
 
 ## Prerequsite
 `pip3 install -r requirements.txt`
-
+`make`
 ## Usage
 1. Run the server: `python3 server.py`
 2. Run the client: `python3 client.py --ip localhost --order 1` 
